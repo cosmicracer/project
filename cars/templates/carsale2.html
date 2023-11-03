@@ -1,0 +1,206 @@
+<html>
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+         div.gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 180px;
+      }
+      
+      div.gallery:hover {
+        border: 2px solid #777;
+      }
+      
+      div.gallery img {
+        width: 100%;
+        height: 150px;
+      }
+      
+      div.desc {
+        padding: 15px;
+        text-align: center;
+      }
+
+      #aa{float: right;}
+
+.center {
+text-align: center;
+}
+
+.pagination {
+display: inline-block;
+}
+
+.pagination a {
+color: black;
+float: left;
+padding: 8px 16px;
+text-decoration: none;
+transition: background-color .3s;
+border: 1px solid #ddd;
+margin: 0 4px;
+}
+
+.pagination a.active {
+background-color: #4CAF50;
+color: white;
+border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+    </style>    
+    </head>
+        
+<body>
+    <div id="aa">
+        <h2 style="text-decoration: underline; color: darkolivegreen;">OUR SERVICES</h3>
+    
+        <ul style="list-style: circle">
+          <li><a class="" href="/carrestore">Vintage Car Repair</a></li>
+          <li><a class="" href="/carsale1">Vintage Car Sales</a></li>
+          <li><a class="" href="/carpaint">Vintage Car Paint</a></li> 
+        </ul>
+    
+        <h2 style="text-decoration: underline; color: darkolivegreen;">SEND US MESSAGE</h2>
+    
+        <form action="sale" method="POST" autocomplete="off">
+          {% csrf_token %}
+            <label for="name"></label>
+            <input type="text" id="name" name="name" placeholder="Name" required><br><br>
+            
+            <label for="mail"></label>
+            <input type="mail" id="mail" name="mail" placeholder="Email" required><br><br>
+            
+            <label for="inbox"></label>
+            <textarea id="inbox" name="inbox" rows="4" cols="20" placeholder="Message" required></textarea><br><br>
+            
+            <input type="submit" value="Submit">
+        </form></div><br>
+
+        <h2 style="text-decoration: underline; color: darkolivegreen;">VINTAGE CAR SALES</h2><br>
+        <h4 style="padding: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">BENTLEY SPEED SIX, 1927 </h4>
+
+        <div class="gallery">
+            <a target="_blank" href="/static/sale2.1.jpg">
+                <img src="{% static 'sale2.1.jpg' %}" alt="bently" width="600" height="600">
+            </a></div>
+
+        <div class="gallery">
+            <a target="_blank" href="/static/sale2.2.jpg">
+                <img src="{% static 'sale2.2.jpg' %}" alt="handle" width="600" height="600">
+        </a></div>
+
+        <div class="gallery">
+        <a target="_blank" href="/static/sale2.3.jpg">
+            <img src="{% static 'sale2.3.jpg' %}" alt="engine" width="600" height="600">
+    </a></div>
+
+    <div class="gallery">
+    <a target="_blank" href="/static/sale2.4.jpg">
+        <img src="{% static 'sale2.4.jpg' %}" alt="back" width="600" height="600">
+</a></div>
+        </div>
+
+        <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    INFORMATION
+                  </button>
+                </h5>
+              </div>
+          
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    Bentley Speed Six, year (chassis) 1927. Chassis number TB2526, Engine number TW2713. 
+                    Colour dark British racing Green combined with a green leather interior and green wool carpet.
+                    This magnificent motorcar is one of the 545 6 ½ Litre and Speed Six models built between 1926 and 1930. 
+                    Bentley 6 ½ Litre chassis TB2526 was built in September 1926, and then fitted with a Limousine Landaulette bodywork by Hooper coachworks, the automobile was completed, and registered in 1927. 
+                    In WW2 the Bentley was used as an ambulance and later converted to a van! The car is listed in the Bentley book by Michael Hay listing the Bentley factory cars, numbers, and details as stated here. 
+                    In the second half of the 20th century the car was extensively restored and rebuilt with a ‘Le Mans’ VandenPlas style open tourer bodywork and a Speed Six radiator with green Bentley badge. 
+                    The enormous 6 ½ Litre Bentley straight-six engine features four valves per cylinder and three S.U. carburettors. The engine runs beautifully. The car comes with a complete and very interesting history file. 
+                    Since the year 2000 the car is in the hands of the last owner/ collector who has taken meticulous care of this important piece of Bentley heritage. In his hands the car has participated in several historic rally/ touring events. 
+                    This is a unique chance to acquire a rare and super exclusive pre-war Bentley ‘Speed Six’ in wonderful condition, and with a delightful vintage patina. 
+                    Please contact us for more information on this rare Bentley motor car.
+                    <h5>BENTLY SPEED SIX is for sale at Classic Job.
+                    Price: € 169.500,</h5>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    MODEL INFORMATION
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+
+The famous Bentley make, erected by Mr. W.O. Bentley, existed as a independent firm for only twelve years (1919-1931) before the proud firm was taken over by the Rolls Royce motor company.
+Those twelve exhilarating Bentley years were filled with racing successes and many victories. 
+The Bentley name as manufacturer of large, heavy, powerful and rugged sportscars was imprinted in the human mind since the "roaring" twenties of the twentieth century.
+Bentley motorcars won the famous 24 hours of Le Mans race in the years 1924, 1927, 1928, 1929 and 1930.
+The years they did not win the race they finished second or third.
+Not only successes at Le Mans were counted but also many victories in the Brooklands 500 mile race.
+Races were won with the 4.5 Litre "blower" but most successes were captured by the Speed Six model.<br><br>
+    
+    <h4>TECHNICAL DATA</h4><br>
+    Six cylinder engine<br>
+    3 S.U. carburettors<br>
+    cylinder capacity: 6588 cc.<br>
+    capacity: approx. 180-190 bhp at 3500 rpm<br>
+    top-speed: approx. 115 mph - 180 km/h<br>
+    gearbox: 4-speed manual<br>
+    brakes: servo assisted drum brakes all round<br>
+    weight: approx. 2200 kg.<br>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                   MAKE HISTORY
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+        
+    <h4>Bently history</h4>
+    
+    The famous Bentley make, erected by Mr. W.O. Bentley, existed as a independent firm for only twelve years (1919-1931) before the proud firm was taken over by the Rolls Royce motor company. 
+    Those twelve exhilarating Bentley years were filled with racing successes and many important victories. 
+    The Bentley name as manufacturer of large, heavy, powerful and rugged sports cars has been imprinted in the human mind since the "roaring" 1920ies.
+
+              </div>
+              </div>
+            </div>
+          </div>
+    
+    
+          <div class="center">
+            <div class="pagination">
+            <a href="/carsale1">&laquo;</a>
+            <a href="/carsale1">1</a>
+            <a href="/carsale2" class="active">2</a>
+            <a href="/carsale3">3</a>
+            <a href="/carsale4">4</a>
+            <a href="/carsale5">5</a>
+            <a href="/carsale6">6</a>
+            <a href="/carsale3">&raquo;</a>
+            </div>
+          </div>
+          
+    </body>
+</html>

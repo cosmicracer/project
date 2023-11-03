@@ -1,0 +1,212 @@
+<html>
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            
+         div.gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 180px;
+      }
+      
+      div.gallery:hover {
+        border: 2px solid #777;
+      }
+      
+      div.gallery img {
+        width: 100%;
+        height: 150px;
+      }
+      
+      div.desc {
+        padding: 15px;
+        text-align: center;
+      }
+
+      #aa{float: right;}
+
+.center {
+text-align: center;
+}
+
+.pagination {
+display: inline-block;
+}
+
+.pagination a {
+color: black;
+float: left;
+padding: 8px 16px;
+text-decoration: none;
+transition: background-color .3s;
+border: 1px solid #ddd;
+margin: 0 4px;
+}
+
+.pagination a.active {
+background-color: #4CAF50;
+color: white;
+border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #84e43c;}
+        </style>
+    </head>
+    <body>
+        <div id="aa">
+            <h2 style="text-decoration: underline; color: darkolivegreen;">OUR SERVICES</h3>
+        
+            <ul style="list-style: circle">
+              <li><a class="" href="/carrestore">Vintage Car Repair</a></li>
+              <li><a class="" href="/carsale1">Vintage Car Sales</a></li>
+              <li><a class="" href="/carpaint">Vintage Car Paint</a></li> 
+            </ul>
+        
+            <h2 style="text-decoration: underline; color: darkolivegreen;">SEND US MESSAGE</h2>
+        
+            <form action="sale" method="POST" autocomplete="off">
+              {% csrf_token %}
+                <label for="name"></label>
+                <input type="text" id="name" name="name" placeholder="Name" required><br><br>
+                
+                <label for="mail"></label>
+                <input type="mail" id="mail" name="mail" placeholder="Email" required><br><br>
+                
+                <label for="inbox"></label>
+                <textarea id="inbox" name="inbox" rows="4" cols="20" placeholder="Message" required></textarea><br><br>
+                
+                <input type="submit" value="Submit">
+            </form></div><br>
+    
+            <h2 style="text-decoration: underline; color: darkolivegreen;">VINTAGE CAR SALES</h2><br>
+            <h4 style="padding: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">MERCEDES-BENZ 280 SL, 1971 </h4>
+    
+            <div class="gallery">
+                <a target="_blank" href="/static/sale5.1.jpg">
+                    <img src="{% static 'sale5.1.jpg' %}" alt="benz" width="600" height="600">
+                </a></div>
+    
+            <div class="gallery">
+                <a target="_blank" href="/static/sale5.2.jpg">
+                    <img src="{% static 'sale5.2.jpg' %}" alt="handle" width="600" height="600">
+            </a></div>
+    
+            <div class="gallery">
+            <a target="_blank" href="/static/sale5.3.jpg">
+                <img src="{% static 'sale5.3.jpg' %}" alt="engine" width="600" height="600">
+        </a></div>
+    
+        <div class="gallery">
+        <a target="_blank" href="/static/sale5.4.jpg">
+            <img src="{% static 'sale5.4.jpg' %}" alt="back" width="600" height="600">
+    </a></div>
+            </div>
+    
+            <div id="accordion">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        INFORMATION
+                      </button>
+                    </h5>
+                  </div>
+              
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        Ford Mustang 2-door Hardtop, year 1965. Chassis (VIN) number 5F07A322536. 
+                        Colour white with blue striping combined with a black interior. 
+                        This impressive Mustang (2-door hardtop model) was extensively modified and uprated for fast road use. 
+                        The car is an ideal companion to participate in historic rally events. 
+                        With a different suspension setup, and some specialist modifications it can also be used for historic circuit racing. 
+                        This Ford Mustang is in a very good and wonderful condition, the car was professionally rally prepared. 
+                        The car was fitted with a new wiring loom, special VDO gauges, power steering, a roll cage, bucket seats, 4-point safety harnesses. 
+                        Furthermore, the car features a powerful 5 litre V8 engine with Edelbrock manifold and carburettors, a manually operated 4-speed gearbox, limited slip differential, vented and drilled disc brakes at the front and 15” alloy rims with 215/60 tyres. 
+                        This Ford Mustang has very competitive looks, it was very well built, and it drives perfectly. A wonderful ‘powerhouse’ for the Mustang enthusiast and/or the thrill-seeking historic rally or racing enthusiast. 
+                        This fantastic Mustang is ready for any new adventure in the hands of a new owner.
+
+                       <h5>This Ford is for sale at Altena Classic Service.
+                        Price: € 59.500,</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        MODEL INFORMATION
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+    In 1961, the Ford saw the light of life as the successor to the famous XK 120, 140 and 150 series. 
+The E-Type was introduced at The Salon car show in Geneva on 15 March, and it was a smashing success of its sublime design and the technical concept. 
+Salient point in this introduction in Geneva was that the E-Type ‘show car’ was ready for presentation just in time.
+In order to be in Geneva in time, the prototype with  PR man Bob Berry at the wheel had to make a crazy nocturnal ride from Coventry to Geneva. Bob left on 14 March 1961 at 19:00 hours. 
+ The weather was bad, and after the ferry he had to conquer many country roads, mountain tracks and passes. 
+Speeding up to 220 kilometers an hour, Bob raced towards his destination, 
+all on his own in the E-Type prototype. Bob arrived with his E-Type in one piece in Geneva at 11:40 at the local  dealer, 
+where the vehicle was prepared for its introduction to the press at the Salon one hour and twenty minutes later. 
+It all turned out well, and the  E-Type scored a hit at the 1961 Geneva Salon.<br><br>
+        
+<h4>Technical data</h4>
+
+Six cylinder in-line engine with double overhead camshafts (DOHC) <br>
+cylinder capacity: 4235 cc. <br>
+capacity: 175 bhp. at 5400 rpm. <br>
+carburettors: 2 x Stromberg CD <br>
+gearbox: 4-speed, manual <br>
+brakes: Dunlop disc brakes all round <br>
+top speed: 225 km/h. - 140 mph. <br>
+weight: 1206 kg. <br>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                       MAKE HISTORY
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+            
+ <h4>Ford history</h4>
+ Though the Ford brand was first used in 1945, its factory had been founded long before. 
+ In 1922, William Lyons and William Walmsley laid the foundation of the firm in Blackpool, England, with the name of Swallow Coachbuilding Co. 
+ The factory constructed motorcycles and sidecars and later bodies based on the Austin Seven chassis. 
+ When in the 1930s their own SS cars were built, the company name was changed into SS cars Ltd.
+ The SS cars were conventional saloons and drophead coupes in the way many other British brands built them.
+ For obvious reasons, After World War II the company name SS Cars Ltd. was changed into Ford Cars Ltd. 
+ It was the birth of the now famous and popular make of Ford.
+
+  </div>
+    </div>
+    </div>
+      </div>
+        
+    
+              <div class="center">
+                <div class="pagination">
+                <a href="/carsale4">&laquo;</a>
+                <a href="/carsale1">1</a>
+                <a href="/carsale2">2</a>
+                <a href="/carsale3">3</a>
+                <a href="/carsale4">4</a>
+                <a href="/carsale5" class="active">5</a>
+                <a href="/carsale6">6</a>
+                <a href="/carsale6">&raquo;</a>
+                </div>
+              </div>
+    </body>
+</html>

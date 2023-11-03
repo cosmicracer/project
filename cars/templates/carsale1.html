@@ -1,0 +1,213 @@
+<html>
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+    
+    div.gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 180px;
+      }
+      
+      div.gallery:hover {
+        border: 2px solid #777;
+      }
+      
+      div.gallery img {
+        width: 100%;
+        height: 150px;
+      }
+      
+      div.desc {
+        padding: 15px;
+        text-align: center;
+      }
+      #aa{float: right;}
+
+
+      .center {
+  text-align: center;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #84e43c;}
+</style>        
+</head>
+<body>
+<div id="aa">
+    <h2 style="text-decoration: underline; color: darkolivegreen;">OUR SERVICES</h3>
+
+    <ul style="list-style: circle">
+        
+       <li><a class="" href="/carrestore">Vintage Car Repair</a></li>
+       <li><a class="" href="/carsale1">Vintage Car Sales</a></li>
+       <li><a class="" href="/carpaint">Vintage Car Paint</a></li> 
+       
+    </ul>
+
+    <h2 style="text-decoration: underline; color: darkolivegreen;">SEND US MESSAGE</h2>
+
+    <form action="sale" method="POST" autocomplete="off">
+      {% csrf_token %}
+        <label for="name"></label>
+        <input type="text" id="name" name="name" placeholder="Name" required><br><br>
+        
+        <label for="mail"></label>
+        <input type="mail" id="mail" name="mail" placeholder="Email" required><br><br>
+        
+        <label for="inbox"></label>
+        <textarea id="inbox" name="inbox" rows="4" cols="20" placeholder="Message" required></textarea><br><br>
+        
+        <input type="submit" value="Submit">
+    </form></div><br>
+
+    <h2 style="text-decoration: underline; color: darkolivegreen;">VINTAGE CAR SALES</h2><br>
+    <h4 style="padding: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">MERCEDES-BENZ 190 SL, 1957 </h4>
+
+
+      
+      <div class="gallery">
+        <a target="_blank" href="/static/sale1.jpg">
+          <img src="{% static 'sale1.jpg' %}" alt="benz" width="600" height="600">
+        </a>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="/static/sale1.1.jpg">
+          <img src="{% static 'sale1.1.jpg' %}" alt="engine" width="600" height="600">
+        </a>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="/static/sale1.2.jpg">
+          <img src="{% static 'sale1.2.jpg' %}" alt="back" width="600" height="600">
+        </a>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="/static/sale1.3.jpg">
+            <img src="{% static 'sale1.3.jpg' %}" alt="handle" width="600" height="600">
+        </a>
+      </div>
+      
+    
+    
+
+    <div id="accordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                INFORMATION
+              </button>
+            </h5>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                Mercedes-Benz 190 SL, year 1957. Colour blueish green (‘Blaugrün’ colour code DB268) combined with a beige leather interior and beige carpet. This stunning Mercedes 190 SL was sold new in Germany. The car was purchased by the current owner in September 1995. In the period 1996-1999 the automobile was extensively restored by specialists; the build was completed by Mercedes-Benz specialist Peters in Itterbeck Germany. This beautiful Mercedes 190 SL is in an excellent top condition showing all the original details! The restoration and the build were executed very well, the bodywork shows a crisp panel fit, wonderful paintwork, and the interior looks a picture. Under the bonnet everything looks beautifully detailed. The matte black paint on the inside of the bonnet and the boot come close to the original matte finish. The original spot welds are still visible under the paint which is according to original specifications. This fine 190 SL drives and handles beautifully, and the car is fitted with a wonderful and correct style Becker Europa radio. This Mercedes-Benz 190 SL shows only very slight traces of previous use, a great find for the Mercedes collector and enthusiast!
+
+                <h5>Mercedes-Benz is for sale at Classic Job.
+                Price: € 129.500,</h5>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                MODEL INFORMATION
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+              
+
+The Mercedes-Benz 190 SL roadster saw the light of day in the year 1955 impersonating a less expensive and less advanced alternative for the 300 SL roadster. Technically the 190 SL roadster shared nothing with big brother 300 SL. But the bodywork design and interior design, which appealed to many people, were strongly inspired by the 300 SL roadster. The Mercedes-Benz 190 SL was a real touring-convertible in opposite to the 300 SL roadster which was a true sports car.
+But the 190 SL was affordable (to Mercedes-Benz standards) and the car found a great share of enthusiastic owners primarily in the sunny states of the USA. The sales success of the 190 SL was based on the good looks of the car but also because of the excellent comfort, the excellent mechanics and its reliability. 
+The Mercedes-Benz 190 SL was equipped with a four-cylinder engine with a cylinder capacity of 1897 cc. and fitted with two carburettors. The standard four-speed manual gearbox was fully synchronized and featured floor shift. From 1956 on the 190 SL was fitted with standard power brakes. 
+During the entire period of production a very nice hardtop was available. The story goes that many European owner ordered the roadster with the hardtop and hardly ever took it off! In the year 1963 the 190 SL was succeeded by the new Mercedes-Benz 230 SL roadster which was going to be known by the nickname "Pagoda".<br><br>
+
+<h4>TECHNICAL DATA</h4><br>
+
+four cylinder engine<br>
+cylinder capacity: 1897 cc.<br>
+carburettors: 2 x Solex<br>
+capacity: 105 bhp. at 5700 rpm.<br>
+torque: 142 Nm at 3200 rpm.<br>
+top-speed: 170 km/h.<br>
+gearbox: 4-speed, manual<br>
+weight: 1100 kg.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+               MAKE HISTORY
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+    
+<h4>Mercedes-Benz history</h4>
+
+The early years
+
+Mercedes-Benz was formed in 1926 by the merger of car manufacturers Daimler and Benz. The founders of both firms, Gottlieb Daimler and Karl Benz, were motoring pioneers who presented their first vehicles powered by internal combustion 4-stroke engines in the years 1886 - 1889. 
+Daimler first introduced a motorcycle and Benz a three wheeler. Shortly after they introduced proper motorcars with four wheels but still resembling horse coaches. The compact and light Daimler engine became very popular and it was incorporated in many of the early French motor cars.
+Panhard et Levassor acquired a licence to produce the Daimler engine. It can be said that with Daimler and Benz the successful industrial production of the automobile started. For the fast developments within the car industry however the French are responsible. For the French pioneers racing was a means to improve the breed.
+The early town to town races were many times won by Daimler or Benz cars or French cars using a Daimler engine. Mr. Emil Jellinek of Nice was to play an important role in the sales and development of Daimler cars. Jellinek appreciated the quality of the Daimler products and so he set up dealerships in Nice an Paris. 
+His ideas were incorporated in the Daimler cars by Daimler and his genius assistant Karl Maybach. Perfectionist Jellinek was a real nuisance to the Daimler firm but he was their largest customer by far. Maybach and Jellinek understood each other perfectly and their synergy lead to that would be the inspiration of all manufacturers and all automobiles to follow, the Mercedes car named after Jellineks daughter. 
+The Mercedes of 1901 featured a proper steel chassis, a front mounted four cylinder engine, a raked steering column and a proper steering wheel. The Mercedes was the car to have for the European rich and famous who assembled in Nice during the ‘Speed Week’, of course Emil Jellinek was one the moving spirits behind this yearly event and he cleverly sold a lot af cars in the process. 
+The Mercedes cars were also very succesful in the French Grand Prix races. Lautenschlager won the 1908 edition in Dieppe with Hemery and Hanriot second and third on 150 HP Benz cars. In 1909 Hemery was the first to break the 200 km/h mark with the Lightning Benz (Blitzen Benz) at the Brooklands race course in England. 
+In 1911 a Blitzen Benz driven by Bob Burman at Daytona Beach broke the absolute land speed record with 228,1 km/h. In 1914 Mercedes again won the French Grand prix with Lautenschlager again being the victor.
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="center">
+        <div class="pagination">
+        <a href="/carsale6">&laquo;</a>
+        <a href="/carsale1" class="active">1</a>
+        <a href="/carsale2">2</a>
+        <a href="/carsale3">3</a>
+        <a href="/carsale4">4</a>
+        <a href="/carsale5">5</a>
+        <a href="/carsale6">6</a>
+        <a href="/carsale2">&raquo;</a>
+        </div>
+      </div>
+        </body>
+
+</html>

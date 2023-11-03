@@ -1,0 +1,210 @@
+<html>
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            
+         div.gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 180px;
+      }
+      
+      div.gallery:hover {
+        border: 2px solid #777;
+      }
+      
+      div.gallery img {
+        width: 100%;
+        height: 150px;
+      }
+      
+      div.desc {
+        padding: 15px;
+        text-align: center;
+      }
+
+      #aa{float: right;}
+
+.center {
+text-align: center;
+}
+
+.pagination {
+display: inline-block;
+}
+
+.pagination a {
+color: black;
+float: left;
+padding: 8px 16px;
+text-decoration: none;
+transition: background-color .3s;
+border: 1px solid #ddd;
+margin: 0 4px;
+}
+
+.pagination a.active {
+background-color: #4CAF50;
+color: white;
+border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #84e43c;}
+        </style>
+    </head>
+    <body>
+        <div id="aa">
+            <h2 style="text-decoration: underline; color: darkolivegreen;">OUR SERVICES</h3>
+        
+            <ul style="list-style: circle">
+              <li><a class="" href="/carrestore">Vintage Car Repair</a></li>
+              <li><a class="" href="/carsale1">Vintage Car Sales</a></li>
+              <li><a class="" href="/carpaint">Vintage Car Paint</a></li> 
+            </ul>
+        
+            <h2 style="text-decoration: underline; color: darkolivegreen;">SEND US MESSAGE</h2>
+        
+            <form action="sale" method="POST" autocomplete="off">
+              {% csrf_token %}
+                <label for="name"></label>
+                <input type="text" id="name" name="name" placeholder="Name" required><br><br>
+                
+                <label for="mail"></label>
+                <input type="mail" id="mail" name="mail" placeholder="Email" required><br><br>
+                
+                <label for="inbox"></label>
+                <textarea id="inbox" name="inbox" rows="4" cols="20" placeholder="Message" required></textarea><br><br>
+                
+                <input type="submit" value="Submit">
+            </form></div><br>
+    
+            <h2 style="text-decoration: underline; color: darkolivegreen;">VINTAGE CAR SALES</h2><br>
+            <h4 style="padding: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">MERCEDES-BENZ 280 SL, 1971 </h4>
+    
+            <div class="gallery">
+                <a target="_blank" href="/static/sale3.1.jpg">
+                    <img src="{% static 'sale3.1.jpg' %}" alt="benz" width="600" height="600">
+                </a></div>
+    
+            <div class="gallery">
+                <a target="_blank" href="/static/sale3.2.jpg">
+                    <img src="{% static 'sale3.2.jpg' %}" alt="handle" width="600" height="600">
+            </a></div>
+    
+            <div class="gallery">
+            <a target="_blank" href="/static/sale3.3.jpg">
+                <img src="{% static 'sale3.3.jpg' %}" alt="engine" width="600" height="600">
+        </a></div>
+    
+        <div class="gallery">
+        <a target="_blank" href="/static/sale3.4.jpg">
+            <img src="{% static 'sale3.4.jpg' %}" alt="back" width="600" height="600">
+    </a></div>
+            </div>
+    
+            <div id="accordion">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        INFORMATION
+                      </button>
+                    </h5>
+                  </div>
+              
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        Mercedes-Benz 280 SL, year 1971. Chassis number 11304412018409. Colour red combined with a black leather interior, black carpet, and a black soft top. 
+                        This magnificent Mercedes 280 SL of the W113 series was sold new in Denmark, this is an original European 280 SL ‘Pagode’! The original Danish paperwork is still present. 
+                        In the period 2010-2011 the car was restored in the United Kingdom, the car is in an excellent condition! The bodywork shows a crisp panel fit, wonderful paint and chrome, a pristine engine room, and a wonderful black leather interior. 
+                        Furthermore, the car still shows the factory original decals. The 280 SL is the last and most powerful model in the W113 series. 
+                        The car features disc brakes around, original alloy wheels shod with 175/70 14-inch tyres, a perfectly shifting automatic 4-speed gearbox and a Blaupunkt radio with cassette player. 
+                        This wonderful Mercedes 280 SL drives perfectly, and the six-cylinder exhaust note is truly addictive. 
+                        A very desirable example! This classic Mercedes-Benz can be imported and registered in any country worldwide.
+                        <h5>This Mercedes-Benz is for sale at Altena Classic Service.
+                        Price: € 89,500.</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        MODEL INFORMATION
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+    
+    
+
+The Mercedes 250 SL was produced alongside the 230 SL from 1966 until 1968. The timeless, austere design that was first seen in the Mercedes 300 SE sedan in 1961, 
+was continued in the 230 SL, the 250 SL and thereafter the 280 SL: many see these versions as the most beautiful Mercedes-Benz creations since the 1960s. 
+The 250 SL is characterized by its refined, lively handling and by its very high constructive and technical quality. 
+The car also offers much space, many comforts and practical conveniences. 
+The open two-person roadster is also available with a hardtop, which changes the car into a closed coupe. 
+The Mercedes-Benz 230 SL/250 SL/280 SL carried the nickname of 'Pagoda' because of the design of the hardtop.<br><br>
+        
+<h4>Technical data</h4>
+
+six cylinder in-line engine><br>
+cylinder capacity: 2496 cc.<br>
+fuel-injection<br>
+capacity: 158 bhp. at 5750 rpm.<br>
+top-speed: 190 km/h.<br>
+gearbox: 4-speed, automatic<br>
+weight: 1310 kg.<br>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                       MAKE HISTORY
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+            
+ <h4>Mercedes-Benz history</h4>
+        
+Mercedes-Benz was formed in 1926 by the merger of car manufacturers Daimler and Benz. 
+The founders of both firms, Gottlieb Daimler and Karl Benz, were motoring pioneers who presented their first vehicles powered by internal combustion 4-stroke engines in the years 1886 - 1889. 
+Daimler first introduced a motorcycle and Benz a three wheeler. Shortly after they introduced proper motorcars with four wheels but still resembling horse coaches. 
+The compact and light Daimler engine became very popular and it was incorporated in many of the early French motor cars. Panhard et Levassor acquired a licence to produce the Daimler engine. 
+It can be said that with Daimler and Benz the successful industrial production of the automobile started. For the fast developments within the car industry however the French are responsible. 
+For the French pioneers racing was a means to improve the breed. The early town to town races were many times won by Daimler or Benz cars or French cars using a Daimler engine. 
+Mr. Emil Jellinek of Nice was to play an important role in the sales and development of Daimler cars. 
+Jellinek appreciated the quality of the Daimler products and so he set up dealerships in Nice an Paris. His ideas were incorporated in the Daimler cars by Daimler and his genius assistant Karl Maybach. 
+Perfectionist Jellinek was a real nuisance to the Daimler firm but he was their largest customer by far.
+
+  </div>
+    </div>
+    </div>
+      </div>
+        
+        
+              <div class="center">
+                <div class="pagination">
+                <a href="/carsale2">&laquo;</a>
+                <a href="/carsale1">1</a>
+                <a href="/carsale2">2</a>
+                <a href="/carsale3" class="active">3</a>
+                <a href="/carsale4">4</a>
+                <a href="/carsale5">5</a>
+                <a href="/carsale6">6</a>
+                <a href="/carsale4">&raquo;</a>
+                </div>
+              </div>
+    </body>
+</html>
